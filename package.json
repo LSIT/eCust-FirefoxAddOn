@@ -1,0 +1,42 @@
+{
+    "title": "Ouvrir liens eCust",
+    "name": "firefox_addon_lien_fichier_local",
+    "version": "0.00.11",
+    "description": "Scans pages for ecust:/// links and makes it possible to open them with the system's file browser.",
+    "main": "lib/main.js",
+    "main-NEW-later": "index.js",
+    "author": "Jbaudoux",
+    "scripts": {
+      "jpm": "jpm run",
+      "jpmLinux": "jpm run -b $(which firefox)"
+    },
+    "engines": {
+        "firefox": ">=38.0a1",
+        "fennec": ">=38.0a1"
+    },
+    "permissions": {
+        "multiprocess": true
+    },
+    "preferences": [{
+      "name": "whitelist",
+      "title": "Urls added to white-list will be clickable",
+      "description": "Any link that will be added to the white-list will be clickable. Empty or * will enable all. Multiple urls are space separated. Wildcards are allowed e.g. *.trello.com",
+      "type": "string",
+      "value": "*"
+    },
+    {
+      "name": "enableExecutables",
+      "title": "Enable links to local executable files",
+      "description": "if enabled any progam file can be launched by the addon. (Attention! A malicious site could use this for denial-of-service attack!)",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "name": "enableLinkIcons",
+      "title": "Enable link icons",
+      "description": "if checked there will be a link added to every local link",
+      "type": "bool",
+      "value": true
+    }
+]
+}

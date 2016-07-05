@@ -1,0 +1,25 @@
+.aliensun-link-icon {
+    display: inline-table;
+    padding-left: 0.1em;
+}
+
+.aliensun-link-icon a {
+    display: table-cell;
+    text-decoration: none;
+}
+
+.aliensun-link-icon i{
+    color: orange; /*#F3C300;*/
+    font-size: 100%;
+    text-shadow: 0.1em 0.1em 0.1em rgba(150, 150, 150, 1);
+    vertical-align: -0.2em; /* correction of y-position of icon */
+    cursor: pointer;
+}
+
+.aliensun-link-icon i:after {
+    content: "folder";
+}
+
+.aliensun-link-icon i:hover:after{
+    content: "folder_open";
+}
